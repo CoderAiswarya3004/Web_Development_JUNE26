@@ -1,0 +1,118 @@
+/* universal selector */
+* {
+    font-family: cursive;
+}
+
+/* Element selector or Tag Selector*/
+h1{
+    color: blue;
+}
+
+p{
+    color:brown;
+}
+
+/* Class Selector */
+.highlight
+{
+    background-color: yellow;
+}
+
+/* id selector */
+
+#unique-box{
+    border: 2px solid blue;
+}
+
+/* Group selector */
+h1, .highlight,#unique-box{
+    font-style: italic;
+}
+
+/* descendant selector */
+.nested  p {
+    color:green;
+}
+
+/* child selector */
+.nested >div>p {
+    background-color:beige ;
+}
+.nested >div>div>p {
+    background-color:red ;
+}
+
+.nested div div p {
+   border: 2px solid yellowgreen;
+}
+
+/* Adjacent Sibling Selector */
+
+h3+p{
+    color:blueviolet;
+}
+
+/* Genral Sibling Selector */
+h3~p{
+    color:cyan
+}
+
+/* Attribute selector */
+
+input[type="text"]
+{
+    border: 2px solid orange;
+    background-color: aquamarine;
+    color:brown;
+}
+
+input[type="password"]
+{
+    border: 2px solid green;
+}
+
+ul{
+    color: blue;
+}
+
+/* pseudo classes */
+.hover-button:hover{
+    background-color: aquamarine;
+}
+
+input:focus{
+    outline: none;
+}
+
+li:first-child
+{
+    color:darkgreen;
+}
+
+li:last-child
+{
+    color:darkred
+}
+
+li:nth-child(3)
+{
+    color:yellowgreen;
+}
+
+/* pseudo Elements */
+.pseudo::first-line{
+    text-decoration: overline;
+}
+
+.pseudo::first-letter{
+    color:blue;
+    font-size: 10px;
+}
+
+.pseudo::before{
+    content:'😒';
+}
+
+.pseudo::after{
+    content:"👈";
+}

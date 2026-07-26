@@ -1,0 +1,21 @@
+if(null)
+{
+    console.log(1)
+}
+else{
+    console.log(2)
+}
+if(undefined)
+{
+    console.log(1)
+}
+else{
+    console.log(2)
+}
+if(NaN)
+{
+    console.log(1)
+}
+else{
+    console.log(2)
+}

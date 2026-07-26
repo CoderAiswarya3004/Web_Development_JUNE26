@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    background-color: violet;
+    width:50vw;
+    height:10vh;
+    padding:5vw;
+    margin:10vh;
+    border:1vh solid red;
+    border-radius:5vh;
+    font-size: 2em;
+}
+
+html{
+    font-size:5px;
+}
+
+body{
+    font-size:10px;
+}
+
+
+p
+{
+    background-color: chartreuse;
+    width:50%;
+    height:50%;
+
+    /* em & rem  */
+    font-size: 3em;
+    font-size:3rem;
+    
+    padding:0.5em;
+
+    margin:2em;
+}

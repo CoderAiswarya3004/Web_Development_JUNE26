@@ -1,0 +1,53 @@
+.head
+{
+    height: 600px;
+    width: 600px;
+    background-color: gold;
+    border-radius:50%;
+    position:relative;
+
+}
+
+.eyes
+{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius:50%;
+    top:150px;
+    left: 120px;
+    position: absolute;
+}
+
+.eyes2
+{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius:50%;
+    top:150px;
+    left: 370px;
+    position: absolute;
+}
+
+.nose
+{
+    height:100px;
+    width:60px;
+    border-radius:50%;
+    background-color: brown;
+    top:270px;
+    left: 270px;
+    position: absolute;
+}
+
+.mouth
+{
+    height: 100px;
+    width: 300px;
+    border-radius:0px 0px 90px 90px;
+    background-color: brown;
+    top:420px;
+    left: 150px;
+    position: absolute;
+}

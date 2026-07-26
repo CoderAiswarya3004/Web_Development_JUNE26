@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky Example</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .header{
+            height:80px;
+            background:red;
+            color:white;
+            text-align:center;
+            line-height:80px;
+        }
+
+        .navbar{
+            height:50px;
+            background:blue;
+            color:white;
+            text-align:center;
+            line-height:50px;
+
+            position: fixed;
+            left:0;
+            right:0;
+  
+        }
+
+        .content{
+            height:1500px;
+            background:lightgray;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        HEADER
+    </div>
+
+    <div class="navbar">
+        I am Sticky
+    </div>
+
+    <div class="content">
+        Scroll down...<br><br>
+        Keep scrolling...
+    </div>
+
+</body>
+</html>
