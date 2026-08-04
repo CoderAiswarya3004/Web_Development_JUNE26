@@ -65,3 +65,51 @@ else
   console.log("Value doesn't exist kindly check the index");
 }
 
+fruits.push('Mango','Orange')
+console.log(fruits);
+console.log("last index of mango is ",fruits.lastIndexOf("Mango"));
+
+console.log(fruits.slice(0,3));
+console.log(fruits.slice(1,3));
+console.log(fruits.slice(2));
+console.log(fruits.slice(2,9));
+console.log(fruits.slice());
+console.log(fruits.slice());
+
+// console.log(fruits.splice(2,3));
+
+// fruits.splice(2,3)
+// console.log("After splice",fruits);
+
+fruits.splice(2,3,"Cherry")
+console.log("After splice2",fruits);
+
+const numbers =["10","20","30"]
+const fruitsWithNumbers = fruits.concat(numbers)
+console.log("fruits with numbers",fruitsWithNumbers);
+
+const fruitsString = fruits.join('-#?')
+console.log(fruitsString); 
+
+fruits.reverse()
+console.log("After reverse",fruits);
+
+fruits.push(1,2,3)
+fruits.sort()
+console.log("After sort",fruits);
+
+const arr =[10,20,30,5]
+// arr.sort((a,b) => b-a)
+// console.log(arr)
+  // (a,b) => {console.log("Adding num1 , num2")
+  //    return num1 + num2
+  // }
+//  arr.sort(function xyz(a,b){
+//    return a-b
+//  })
+// console.log(arr)
+
+// function xyz(a,b){
+//    return a-b
+//  }
+
