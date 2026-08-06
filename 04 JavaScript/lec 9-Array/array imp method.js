@@ -150,14 +150,80 @@ const products = [
 
 ///======================== name = c
 
-const students = [
-  { name: "A", marks: 80 },
-  { name: "B", marks: 45 },
-  { name: "C", marks: 60 }
-];
+// const students = [
+//   { name: "A", marks: 80 },
+//   { name: "B", marks: 45 },
+//   { name: "C", marks: 60 }
+// ];
 
-const finding = students.find(product => product.name == "C")
-const findingidx = students.findIndex(product =>product.name =="C")
+// const finding = students.find(product => product.name == "C")
+// const findingidx = students.findIndex(product =>product.name =="C")
 
-console.log(finding);
-console.log("its index is "+findingidx)
+// console.log(finding);
+// console.log("its index is "+findingidx)
+
+// //============================== reduce()
+
+// let numbers = [10,20,30,40,50]
+
+// const sum = numbers.reduce((prevVal,currVal,idx,arr)=>{
+//     console.log("Previous Value is", prevVal,"current value is",currVal,"at idx",idx,"of array",arr);
+
+//     return prevVal+currVal
+// })
+
+// console.log("////////////// sum",sum);
+
+const orders =[
+    {
+        id:101,
+        amount:2000,
+        status:"Delivered"
+    },
+     {
+        id:102,
+        amount:4000,
+        status:"Pending"
+    },
+     {
+        id:103,
+        amount:6000,
+        status:"Delivered"
+    },
+]
+// 1. find the orders whose status is delivered 
+// const deliveredOrders = orders.filter((order)=>order.status == "Delivered")
+//
+// 2. Merged the delivered orders amount to get the total sale
+
+const totlamt = orders.filter((order) => order.status == "Delivered").reduce((prevVal,currVal)=>{
+    return prevVal+currVal.amount
+},0)
+
+console.log(totlamt);
+
+const users =[
+    {
+        id:1,
+        name:"Sarthak",
+        age:20
+    },
+    {
+        id:2,
+        name:"Amit",
+        age:26
+    },
+    {
+        id:3,
+        name:"Nilkhil",
+        age:28
+    },
+]
+
+const total_age = users.reduce((prev,curr)=>{
+    return prev+curr.age
+},0)
+
+const avg_age = total_age/3
+
+console.log(avg_age);
