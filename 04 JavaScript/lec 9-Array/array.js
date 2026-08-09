@@ -77,7 +77,6 @@ console.log(fruits.slice());
 console.log(fruits.slice());
 
 // console.log(fruits.splice(2,3));
-
 // fruits.splice(2,3)
 // console.log("After splice",fruits);
 

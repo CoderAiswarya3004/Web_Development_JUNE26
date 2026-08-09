@@ -61,6 +61,11 @@ function handleUpdate(target){
     // {
     //     employee.id = value
     // }
+
+    //switch(name){
+    // case "id":employee.id=value
+    //
+    //}
 }
 
 handleUpdate({name:"age",value:28})
