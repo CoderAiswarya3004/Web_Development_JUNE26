@@ -7,19 +7,19 @@
 
 // //for of loop ------------------------
 // console.log("By using for of loop ----------")
-// for(const fruit of fruits)
+// for(const h  of fruits)
 // {
-//     console.log(fruit)
+//     console.log(h)
 // }
 
-//for in loop ------------------------ (object)
-// const student ={
-//     id:101,
-//     name: "Ankit",
-//     age: 25,
-//     course:"Java Fullstack",
-//     courseFees: 30000.99
-// }
+// for in loop ------------------------ (object)
+const student ={
+    id:101,
+    name: "Ankit",
+    age: 25,
+    course:"Java Fullstack",
+    courseFees: 30000.99
+}
 
 // console.log("By using for in loop ----------")
 
@@ -41,13 +41,13 @@
 // Object.values(student).forEach((n) => console.log(n))
 
 
-const student ={
-    id:101,
-    name: "Ankit",
-    age: 25,
-    course:"Java Fullstack",
-    courseFees: 30000.99
-}
+// const student ={
+//     id:101,
+//     name: "Ankit",
+//     age: 25,
+//     course:"Java Fullstack",
+//     courseFees: 30000.99
+// }
 
 // console.log(Object.entries(student))
 // const entries = Object.entries(student)
@@ -67,7 +67,7 @@ const student ={
 //     console.log(a,"->",b)
 // }
 
-for(let [key,value] of Object.entries(student))
-{
- console.log(key,"->",value)   
-}
+// for(let [key,value] of Object.entries(student))
+// {
+//  console.log(key,"->",value)   
+// }
