@@ -26,10 +26,61 @@ const urls =["data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgk
 // console.log("..........",firstImageById)
 // console.dir(firstImageById)
 
-const getThroughQuery=document.querySelector("#first-image")
-console.log(getThroughQuery)
+// const getThroughQuery=document.querySelector("#first-image")
+// console.log(getThroughQuery)
 
-const getThroughQuery1=document.querySelectorAll(".css-images")[1]
+// const getThroughQuery1=document.querySelectorAll(".css-images")[1]
+// console.log(getThroughQuery1)
 
-console.log(getThroughQuery1)
+//===================
+
+// console.log(document.querySelectorAll("[username]")) 
+// console.log(document.querySelector("[username='admin']")) 
+
+// const h2=document.querySelector('[username =admin]')
+// console.log(h2.getAttribute("username"))
+
+// console.log(document.querySelector('#first-image').getAttribute('username'))
+
+// console.log(document.querySelector("body > p:nth-child(8)").getAttribute('style'))
+// // const getThroughGetAtrribute =
+
+// document.querySelector("body > p:nth-child(8)").setAttribute("title","footer")
+// document.querySelector("body > p:nth-child(8)").title = footer // global naming can be done without set attribute
+
+// document.querySelector("#first-image").setAttribute("src","https://thumbs.dreamstime.com/b/silhouette-writer-detective-54291834.jpg")
+
+// document.querySelector("body > p:nth-child(3)").setAttribute("style","color:red")
+// document.querySelector("body > p:nth-child(3)").setAttribute("style","background-color:greenyellow") //previous value get override here(Not a good approach)
+
+//////////////////=======
+
+// document.querySelector("body > h2:nth-child(3)").setAttribute("class", "bgYellowGreen red");
+
+/////////////////==========================
+
+// document.querySelector("body > h2:nth-child(3)").classList.add("red")
+// document.querySelector("body > h2:nth-child(3)").classList.add("bgYellowGreen") //doing through classlist is better approach
+
+// Classlist property=============================
+
+// document.querySelector("body > h2:nth-child(3)").classList.add("bgYellowGreen")
+
+// document.querySelector("body > h2:nth-child(3)").removeAttribute("class = 'red'") //wrong try
+
+
+// Acessing parent and sibling element ==========
+
+
+// console.dir(document.querySelector("body > ul > li:nth-child(1)")) // parent.element for every child 
+
+const firstLink =document.querySelector("body > p:nth-child(5) > a:nth-child(2)")
+
+console.log(firstLink)
+
+//document.querySelector("body > p:nth-child(5) > a:nth-child(2)").parentElement.parentElement.parentElement.children
+
+//Adding element
+
+//========= append()
 
