@@ -25,29 +25,30 @@
         const container = document.querySelector(".container")
         // createElement ----------------
         const newParaGraph = document.createElement("p")
-        container.append(newParaGraph)
-        newParaGraph.textContent="This is dynamically created paragraph"
-        newParaGraph.id = "new-Paragraph"
-        // newParaGraph.className = "new-paragraph"
-        // newParaGraph.className = "new-paragraph1"
-        // newParaGraph.style.backgroundColor = "green"
-        newParaGraph.classList.add("new-paragraph")
-        newParaGraph.classList.add("new-paragraph1")
-        newParaGraph.classList.add("highlight")
+        // newParaGraph.textContent ="Hello Snigdha"
+        // container.prepend(newParaGraph)
+        // newParaGraph.textContent="This is dynamically created paragraph"
+        // newParaGraph.id = "new-Paragraph"
+        // // newParaGraph.className = "new-paragraph"
+        // // newParaGraph.className = "new-paragraph1"
+        // // newParaGraph.style.backgroundColor = "green"
+        // newParaGraph.classList.add("new-paragraph")
+        // newParaGraph.classList.add("new-paragraph1")
+        // newParaGraph.classList.add("highlight")
 
-        //insertAdjacentHTML --------------------
-        container.insertAdjacentHTML("beforeend","<p id ='htmlParagraph'>inserted before end</p>")
-        container.insertAdjacentHTML("afterend","<p id ='htmlParagraph'>inserted after end</p>")
+        // insertAdjacentHTML --------------------
+        // container.insertAdjacentHTML("beforeend","<p id ='htmlParagraph'>inserted before end</p>")
+        // container.insertAdjacentHTML("afterend","<p id ='htmlParagraph'>inserted after end</p>")
 
-        //insertAdjacentElement -----------------
+        // //insertAdjacentElement -----------------
 
-        const newSpan = document.createElement("span")
-        newSpan.textContent = "inserted element before begin"
-        container.insertAdjacentElement("beforebegin",newSpan)
+        // const newSpan = document.createElement("span")
+        // newSpan.textContent = "inserted element before begin"
+        // container.insertAdjacentElement("beforebegin",newSpan)
 
-        const anotherNewSpan = document.createElement("span")
-        anotherNewSpan.textContent = "inserted element after dynamically created paragraph"
-        newParaGraph.insertAdjacentElement("afterend",anotherNewSpan)
+        // const anotherNewSpan = document.createElement("span")
+        // anotherNewSpan.textContent = "inserted element after dynamically created paragraph"
+        // newParaGraph.insertAdjacentElement("afterend",anotherNewSpan)
 
         //closest() ----------------
         
