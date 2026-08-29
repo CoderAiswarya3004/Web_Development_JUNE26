@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="font-family: cursive;">
+    <h1>API - (Application Programming Interface)</h1>
+    <p>- It is a set rules & protocols that allows different applications to communicate with each other</p>
+    <p>- In simple word it's just a breeze between 2 applications.</p>
+
+    <div style="border: 2px solid black; border-radius: 5px; background-color: lightgray; padding: 10px;">
+        <h3>Free Fake API's List</h3>
+        <ul style="margin-top: -15px;">
+            <li>Dummy JSON</li>
+            <li>JSON placeholder</li>
+            <li>catfact.ninja</li>
+            <li>dog image api</li>
+        </ul>
+    </div>
+
+    <h1>JSON - (javascript Object Notation)</h1>
+    <h3>Diff bet<sup>n</sup> javascript Object & JSON ?</h3>
+    <ul>
+        <li>In key key must be encoded with double quote (String value)</li>
+        <li>In JSON no trailing comma should be avilable.</li>
+    </ul>
+    <table id="productsTable" border="1">
+        <caption>Products Table</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- //Task - Date Object in js W3Schools
+    //Try dummy links -->
+    <script>
+        fetch('https://dummyjson.com/products')
+            .then((res) => {
+                // console.log("//////",res)
+                // console.log("//////",res.json())
+                return res.json()
+            })
+            .then((res) => {
+                const date = new Date();
+                let productArray = res.products.map((product) => {
+                    return {
+                        id: product.id,
+                        title: product.title,
+                        brand: product.brand,
+                        category: product.category,
+                        price: product.price,
+                        rating: product.rating,
+                        createdYear: new Date(product.meta.createdAt).getFullYear()
+                    }
+                })
+                console.log("....", res);
+                console.log("....", productArray);
+
+                const tbody = document.querySelector("#productsTable tbody")
+                productArray.forEach(p => {
+                    const row = document.createElement('tr')
+
+                    const idCol = document.createElement('td')
+                    idCol.innerText = p.id
+                    const titleCol = document.createElement('td')
+                    titleCol.innerText = p.title
+                    const brandCol = document.createElement('td')
+                    brandCol.innerText = p.brand
+                    const categoryCol = document.createElement('td')
+                    categoryCol.innerText = p.category
+                    const priceCol = document.createElement('td')
+                    priceCol.innerText = p.price
+                    const ratingCol = document.createElement('td')
+                    ratingCol.innerText = p.rating
+                    const createdYearCol = document.createElement('td')
+                    createdYearCol.innerText = p.createdYear
+                    row.append(idCol, titleCol, brandCol, categoryCol, createdYearCol, priceCol, ratingCol)
+                    tbody.append(row)
+                });
+
+            })
+            .catch((err) => {
+                console.log("Some error occured", err);
+            })
+
+
+        // id , brand , category ,price ,rating
+
+        //Adding a new Product using 
+        fetch('https://dummyjson.com/products/add', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json' },
+            body: JSON.stringify( {
+                title: "Laptop Bag",
+                brand: "Lenovo",
+                category: "Bag",
+                price: "1099",
+                rating: "4.4",
+                createdYear: "2026",
+            })
+        })
+            .then((res) => {
+                console.log("Got response", res)
+                if (res.status == 201)
+                    return res.json()
+                else
+                    throw new Error("Unable to create product")
+            })
+            .then((res) => {
+                console.log("Final result is result", res)
+            })
+            .catch((err) => {
+                console.log("Some error occured", err)
+            })
+    </script>
+</body>
+
+</html>
