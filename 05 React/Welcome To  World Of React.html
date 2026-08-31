@@ -12,29 +12,46 @@
 
     <div id="root"></div>
     <script>
-        const root = document.querySelector("#root");
+//         const root = document.querySelector("#root");
         
-        // To create a React Element (React Element is a Javascript Object)
-        // React.createElement() //tag , props (attributes), children
-        const h2 = React.createElement("h2",{},"Hello React")
+//         // To create a React Element (React Element is a Javascript Object)
+//         // React.createElement() //tag , props (attributes), children
+//         const h2 = React.createElement("h2",{},"Hello React")
 
-//         const h3 =
-//             {
-//      "$$typeof": "Symbol('react.element')",
-//      "key": null,
-//      "ref": null,
-//      "props": {
-//         "children": "Hello React"
-//          },
-//      "_owner": null,
-//      "_store": {}
-//      }
-        
-        //-wrong root.render(h2)
-        //For Renndering the React element we need a starting position
-        // ReactDOM.createRoot(root).render(h2)
+// //         const h3 =
+// //             {
+// //      "$$typeof": "Symbol('react.element')",
+// //      "key": null,
+// //      "ref": null,
+// //      "props": {
+// //         "children": "Hello React"
+// //          },
+// //      "_owner": null,
+// //      "_store": {}
+// //      }
+//         //-wrong root.render(h2)
+//         //For Renndering the React element we need a starting position
+//         // ReactDOM.createRoot(root).render(h2)
 
-        ReactDOM.createRoot(root).render(h3)
-    </script>
+//         ReactDOM.createRoot(root).render(h3)
+
+//=============================
+//1. Create React Element        
+const h1 = React.createElement("h1",{className:'heading-1'},"Hello React")
+const h2 = React.createElement("h2",{className:'heading-2',
+    style:{
+        backgroundColor:'red',
+        color:'Yellow',
+        textDecoration: 'underline'
+    }
+},"Welcome to React")
+
+const parentDiv = React.createElement('div',{},h1,h2) 
+
+//2.Create a Root (Starting position)
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+    root.render(parentDiv)
+
+</script>
 </body>
 </html>
