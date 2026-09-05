@@ -2,6 +2,7 @@ import React,{Fragment} from 'react'
 import './App.css'
 import App1 from './App1.jsx'
 import Product from './Product.jsx'
+import products from './product.js'
 
 function App() {
 
@@ -54,8 +55,15 @@ function App() {
       {/* App1() :- Not recognised as a component */}
       <App1/>
 
-      <Product name="Watch" price="2500" description="This is a watch" brand="Rolex" />
-      <Product name="Mobile" price="30000.99" brand="Samsung"/>
+      {/* {Product()} */}
+      {/* <Product></Product> */}
+      {/* <Product name="Watch" price="2500" description="This is a watch" brand="Rolex" />
+      <Product name="Mobile" price="30000.99" brand="Samsung"/> */}
+      
+      {products.map(p=>(
+        <Product name = {p.name}  price ={p.price} description={p.description} brand={p.brand}></Product> 
+      ))}
+
     </>
   )
 }
