@@ -17,7 +17,28 @@ function App() {
     // console.log("increasing count",state[0]);
     // state[1](state[0]++)
     // setCount(count++)
-    setCount(count+1)
+    // setCount(count+1)
+
+    // setCount((prevState)=>{
+    //   console.log("prevstate:-1 is",prevState)
+    //   console.log("count:-1 is",count)
+    //   return prevState + 1 
+    // })
+    // setCount((prevState)=>{
+    //   console.log("prevstate:-2 is",prevState)
+    //   console.log("count:-2 is",count)
+    //   return prevState + 1 
+    // })
+    // setCount((prevState)=>{
+    //   console.log("prevstate:-3 is",prevState)
+    //   console.log("count:-3 is",count)
+    //   return prevState + 1 
+    // })
+
+    setCount(prevState => prevState +1)
+    setCount(prevState => prevState +1)
+    setCount(prevState => prevState +1)
+    
     console.log("increasing count",count);
   }
 
